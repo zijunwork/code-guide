@@ -1,8 +1,6 @@
 ![logo](_media/icon.svg)
 
-# zijunwork <small>-code-guide</small>
-
-> Organize front-end code specifications.
+# code-guide
 
 - Author: Zi_Jun
 
