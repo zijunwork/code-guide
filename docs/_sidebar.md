@@ -5,4 +5,5 @@
   - [CSS规范](/code-guide/css)
   - [JavaScript规范](/code-guide/javascript)
   - [Vue规范](/code-guide/vue)
+  - [Commit规范](/code-guide/commit)
   - [开发文档规范](/code-guide/dev)
