@@ -45,19 +45,78 @@ Commit message 一般包括三部分：标题(Header) + 正文(body) + 页脚(Fo
 
 2. **正文(Body)**
 
-   正文是对标题的补充。是commit的详细描述。如代码修改的动机，于修改前的代码对比等。
+   可选。正文是对标题的补充。是commit的详细描述。如代码修改的动机，于修改前的代码对比等。
 
 3. **页脚(Footer)**
 
-   页脚常用备注信息。比如
+   可选。页脚常用备注信息。比如
 
    1. 版本兼容性变动（需要相关描述）
    2. 关闭指定的Issue号（也适用于关闭的bug号）
 
 
 
-#### 03、插件推荐
+#### 03、校验工具
 
-commitlint: commitlint校验commit是否符合规范
+* commitlint: 校验commit是否符合规范
 
-husky: husky能够防止不规范代码被commit、push、merge等等
+* husky: 防止不规范代码被commit、push、merge等
+
+项目使用步骤：
+
+1. `npm install -g @commitlint/cli @commitlint/config-conventional ` 全局安装commitlint
+2. 在项目根目录（.git同级目录）新建 `commitlint.config.js` 文件（文件内容如下），制定提交规范
+3. 在项目根目录（.git同级目录）新建 `package.json` 文件，写入 `{}` （文件内容如下），计划安装 husky
+4. 在项目根目录(注意前提)，`npm install husky --save-dev` ，项目局部安装 husky
+5. 在 `package.json` 文件中写入勾子设置即可
+
+```javascript
+// commitlint.config.js
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'type-enum': [2, 'always', [
+      "feat", "fix", "docs", "style", "refactor", "test", "chore", "revert", "perf"
+    ]],
+    'subject-full-stop': [0, 'never'],
+    'subject-case': [0, 'never']
+  }
+};
+```
+
+```json
+// package.json 安装 husky 之前
+{
+    
+}
+```
+
+```json
+// package.json 安装 husky 之后，写入勾子设置
+{
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "husky": "^4.2.5"
+  }
+}
+```
+
+
+
+#### 04、实例说明
+
+```bash
+feat(commit): 完善commit
+
+1. 新增提交注释的项目安装步骤
+2. 新增实例说明
+```
+
+更多可以查看本项目的提交
+
+
+
