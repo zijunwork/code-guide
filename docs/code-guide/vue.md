@@ -17,8 +17,8 @@
 8. 函数名全部采用驼峰命名法，并且前缀必须为动词。e.g.: `function getListData() {}`
 
    * 常用动词推荐：`can`， `is`, `has`, `get`, `set`, `load`, `open`, `close`, `jump`, `computed`
-
    * 触发为事件型动词推荐：`on`, `handle`
+9. 函数参数，路由参数全部采用驼峰命名法。e.g.: `userId`
 
    
 

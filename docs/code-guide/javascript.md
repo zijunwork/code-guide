@@ -1,20 +1,16 @@
 #### 01、命名规范
 
 1. 除特殊文件名外，文件名必须全部采用中划线命名法。e.g.: `global-methods.js`， `README.md`
-
 2. 变量名全部采用驼峰命名法。e.g.: `isLogin`, `tableTitle`
-
-3. 常量名全部采用大写字母下划线命名法。e.g.: `MAX_COUNT`, `BASE_URL`
-
-4. 函数名全部采用驼峰命名法，并且前缀必须为动词。e.g.: `function getListData() {}`
+3. 函数参数，路由参数全部采用驼峰命名法。e.g.: `userId`
+4. 常量名全部采用大写字母下划线命名法。e.g.: `MAX_COUNT`, `BASE_URL`
+5. 函数名全部采用驼峰命名法，并且前缀必须为动词。e.g.: `function getListData() {}`
 
    * 常用动词推荐：`can`， `is`, `has`, `get`, `set`, `load`, `open`, `close`, `jump`, `computed`
 
    * 触发为事件型动词推荐：`on`, `handle`
-
-5. 类名全部采用pascal命名法。e.g.: `class Student{}`
-
-6. 类中公共属性名全部采用驼峰命名法，私有属性全部采用下划线命名法。e.g.: `getName(){}`, `_name() {}`
+6. 类名全部采用pascal命名法。e.g.: `class Student{}`
+7. 类中公共属性名全部采用驼峰命名法，私有属性全部采用下划线命名法。e.g.: `getName(){}`, `_name() {}`
 
 
 

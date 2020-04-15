@@ -89,3 +89,11 @@ e.g.: `code-guide.md`, `dev-document.md`
 
 e.g.: `icon_avatar.jpg`, `defalut_bg.png`
 
+
+
+#### 10、路由参数
+
+如果有多个单词，全部采用驼峰命名法。
+
+e.g.: `activityId`, `userId`
+
