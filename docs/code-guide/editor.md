@@ -22,20 +22,9 @@ indent_size = 2
 indent_style = space
 trim_trailing_whitespace = true
 insert_final_newline = true
-curly_bracket_next_line = false
-spaces_around_operators = true
 tab_width = 2
-
-[*.{js,ts,vue}]
-quote_type = single
-
-[*.{html,less,css,scss,sass,json}]
-quote_type = double
 
 [*.md]
 trim_trailing_whitespace = false
-
-[package.json]
-indent_size = 2
 ```
 
