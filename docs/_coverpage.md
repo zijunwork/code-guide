@@ -1,6 +1,6 @@
 ![logo](_media/icon.svg)
 
-# code-guide<small>v3.0.0</small>
+# code-guide<small>v3.1.0</small>
 
 - Author: Zi_Jun
 
