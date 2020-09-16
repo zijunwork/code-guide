@@ -64,11 +64,18 @@ Commit message 一般包括三部分：标题(Header) + 正文(body) + 页脚(Fo
 
 项目使用步骤：
 
-1. `npm install -g @commitlint/cli @commitlint/config-conventional ` 全局安装commitlint
-2. 在项目根目录（.git同级目录）新建 `commitlint.config.js` 文件（文件内容如下），制定提交规范
-3. 在项目根目录（.git同级目录）新建 `package.json` 文件，写入 `{}` （文件内容如下），计划安装 husky
+1. 在项目根目录（.git同级目录）新建 `package.json` 文件，写入 `{}` （文件内容如下），计划安装插件
+2. `npm install --save-dev @commitlint/cli @commitlint/config-conventional ` 项目局部安装commitlint
+3. 在项目根目录（.git同级目录）新建 `commitlint.config.js` 文件（文件内容如下），制定提交规范
 4. 在项目根目录(注意前提)，`npm install husky --save-dev` ，项目局部安装 husky
 5. 在 `package.json` 文件中写入勾子设置即可
+
+```json
+// package.json 安装 插件 之前
+{
+    
+}
+```
 
 ```javascript
 // commitlint.config.js
@@ -85,13 +92,6 @@ module.exports = {
 ```
 
 ```json
-// package.json 安装 husky 之前
-{
-    
-}
-```
-
-```json
 // package.json 安装 husky 之后，写入勾子设置
 {
   "husky": {
@@ -100,7 +100,9 @@ module.exports = {
     }
   },
   "devDependencies": {
-    "husky": "^4.2.5"
+    "husky": "^4.2.5",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4"
   }
 }
 ```
