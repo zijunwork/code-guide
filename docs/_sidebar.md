@@ -7,3 +7,4 @@
   - [Vue规范](/code-guide/vue)
   - [Commit规范](/code-guide/commit)
   - [开发文档规范](/code-guide/dev)
+  - [API规范](/code-guide/api)
